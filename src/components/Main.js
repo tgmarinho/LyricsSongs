@@ -3,7 +3,7 @@ import { Input } from "antd";
 
 const { TextArea } = Input;
 
-const Main = ({ lyrics }) => {
+const Main = ({ lyrics, hiddenTextArea }) => {
 
     return (
         <Fragment>
@@ -16,6 +16,7 @@ const Main = ({ lyrics }) => {
                             // hidden={this.state.hiddenTextArea}
                             autosize
                             value={lyrics}
+                            hidden={hiddenTextArea}
                         />
 
 

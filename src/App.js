@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import './App.css';
 
-import { getLyricsByPiece } from "./api/getLyrics";
+import { getLyricsByPiece, getImgArtistic } from "./api/getLyrics";
 import AppContent from './AppContent';
 
 
@@ -17,17 +17,15 @@ class App extends Component {
 
   handleSearch = event => {
 
-
-    const value = event.target.value;
     const keyCode = event.which || event.keyCode
     const ENTER = 13;
-
+    this.setState({ hiddenTextArea: true });
     if (keyCode === ENTER) {
       const search = event.target.value;
       this.setState({ lyrics: "" });
-      this.setState({ hiddenTextArea: true });
-      // Não permitir ir na API para buscar uma palavra tão irrelevante com quatro caracteres apenas
-      // if (search.length <= 4 || search.trim() === "") {
+     
+      // Não permitir ir na API para buscar uma palavra tão irrelevante com tres caracteres apenas
+      // if (search.trim().length <= 3) {
       //   return;
       // }
       this.setState({ search });
@@ -39,13 +37,12 @@ class App extends Component {
   };
 
   showLyrics = async () => {
-    this.setState({ loading: false });
-    this.setState({ hiddenTextArea: true });
+    this.setState({ isLoading: false, hiddenTextArea: true });
+    // const img = await getImgArtistic(123);
     const lyrics = await getLyricsByPiece(this.state.search);
     console.log(lyrics)
-    this.setState({ loading: true });
-    this.setState({ hiddenTextArea: false });
-    this.setState({ lyrics });
+    this.setState({ isLoading: true, hiddenTextArea: false, lyrics });
+   
   };
 
 

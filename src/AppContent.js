@@ -17,7 +17,6 @@ const AppContent = ({
         <Main
           hiddenTextArea={hiddenTextArea}
           lyrics={lyrics}
-          isLoading={isLoading}
         />
       </div>
     </Fragment>
