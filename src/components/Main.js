@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
-import { Input } from "antd";
+// import { Input } from "antd";
 
-const { TextArea } = Input;
+// const { TextArea } = Input;
 
 const Main = ({ lyric, hiddenTextArea, imgArtist, name, artist, urlToVagalume }) => {
 
@@ -13,12 +13,12 @@ const Main = ({ lyric, hiddenTextArea, imgArtist, name, artist, urlToVagalume })
                         {/* <textarea className="album-info" rows="25" cols="40" readonly value={lyrics}/> */}
                        <h3>{name}</h3>
                        <br />
-                        <TextArea className="album-info"
+                        {/* <TextArea className="album-info"
                          style={{ backgroundColor : "#1d2028", color: "white" }}
                             autosize
                             value={lyric}
                             hidden={hiddenTextArea}
-                        />
+                        /> */}
 
 
                     {/* </div> */}

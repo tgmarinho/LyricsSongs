@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.8.4",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.8.0",
     "cors": "^2.8.4",

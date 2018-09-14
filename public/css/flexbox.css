@@ -1,28 +1,40 @@
 
 
 
-.header {
+.header .container {
     display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
+.header-nav {
+	display: flex;
+}
+
 .search {
+	display: flex;
+	align-items: center;
 
 }
 
-.content {
+.lyricsContent .container {
+	display: flex;
+
 
 }
 
-.lyric-content {
 
+.lyricsContent-items {
+	text-align: center;
+    display: flex;
+	flex-direction: column;
+	flex-grow: 2;
 }
 
-.info-content {
 
-}
+.footer .container {
 
-.footer {
+	display: flex;
+	justify-content: space-between;
 
 }

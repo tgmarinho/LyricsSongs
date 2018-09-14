@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import './App.css';
+// import './App.css';
 
 import { getLyricsByPiece, getImgArtistic } from "./api/getLyrics";
 import AppContent from './AppContent';
