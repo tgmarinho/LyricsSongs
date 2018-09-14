@@ -3,8 +3,11 @@ import Aside from "./components/Aside";
 import Main from "./components/Main";
 
 const AppContent = ({
-  search,
-  lyrics,
+  lyric,
+  name,
+  artist,
+  urlToVagalume,
+  imgArtist,
   isLoading,
   hiddenTextArea,
   handleSearch
@@ -16,7 +19,11 @@ const AppContent = ({
 
         <Main
           hiddenTextArea={hiddenTextArea}
-          lyrics={lyrics}
+          lyric={lyric}
+          imgArtist={imgArtist}
+          name={name}
+          artist={artist}
+          urlToVagalume={urlToVagalume}
         />
       </div>
     </Fragment>

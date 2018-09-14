@@ -6,6 +6,7 @@
     "antd": "^3.8.4",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.8.0",
+    "cors": "^2.8.4",
     "react": "^16.4.2",
     "react-app-rewire-less": "^2.1.2",
     "react-app-rewired": "^1.5.2",

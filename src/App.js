@@ -9,10 +9,16 @@ class App extends Component {
 
   state = {
     search: "",
-    lyrics: "",
+    lyric: "",
+    artist: "",
+    name: "",
+    urlToVagalume: "",
+    imgArtist: null,
     isLoading: true,
     hiddenTextArea: true
   };
+
+  
 
 
   handleSearch = event => {
@@ -22,7 +28,7 @@ class App extends Component {
     this.setState({ hiddenTextArea: true });
     if (keyCode === ENTER) {
       const search = event.target.value;
-      this.setState({ lyrics: "" });
+      this.setState({ lyric: "" });
      
       // Não permitir ir na API para buscar uma palavra tão irrelevante com tres caracteres apenas
       // if (search.trim().length <= 3) {
@@ -39,9 +45,11 @@ class App extends Component {
   showLyrics = async () => {
     this.setState({ isLoading: false, hiddenTextArea: true });
     // const img = await getImgArtistic(123);
-    const lyrics = await getLyricsByPiece(this.state.search);
-    console.log(lyrics)
-    this.setState({ isLoading: true, hiddenTextArea: false, lyrics });
+    const dataRec = await getLyricsByPiece(this.state.search);
+    console.log(dataRec)
+  
+    this.setState({ isLoading: true, hiddenTextArea: false, 
+       ...dataRec });
    
   };
 
