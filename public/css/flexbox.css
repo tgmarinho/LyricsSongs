@@ -19,16 +19,20 @@
 
 .lyricsContent .container {
 	display: flex;
-
-
+	background-color: red;
+	
 }
 
+.lyricsContent-lyrics {
+	flex-grow: 1;
+}
 
-.lyricsContent-items {
+.lyricsContent-detail {
 	text-align: center;
     display: flex;
 	flex-direction: column;
 	flex-grow: 2;
+	background-color: green;
 }
 
 
@@ -41,4 +45,69 @@
 	position:absolute;
     bottom:0;
 	width:100%;
+}
+
+
+
+
+/* para mobile */
+@media(max-width: 768px) {
+	.cabecalhoPrincipal .container {
+		flex-direction: column;
+		align-items: initial;
+		text-align: center;
+	}
+
+	.cabecalhoPrincipal-nav {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos-link {
+		width:100%;
+	}
+
+	.rodapePrincipal-navMap-list {
+		height: auto;
+	}
+
+	.rodapePrincipal-patrocinadores .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.rodapePrincipal-contatoForm {
+		width: 100%;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+		margin: 0;
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm-fieldset {
+		justify-content:center
+	}
+
+	.cabecalhoPrincipal-nav-link-app {
+    	order: -1;
+	}
+
+	.lyricsContent-items {
+    	flex-grow: 1;
+    	flex-shrink: 2; 
+	}
+
+	.lyricsContent .container {
+    	flex-direction: column;
+	}
+
+	.lyricsContent-items {
+   		margin: 0 auto;
+	}
+
+	
 }

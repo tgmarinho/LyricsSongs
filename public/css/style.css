@@ -208,6 +208,55 @@ body {
 	margin-bottom: 10px;
 }
 
+
+
+
+/* content lyrics details and lyrics as well */
+.lyricsContent {
+	background-color: #5E9EDC;
+	padding: 25px 0;
+
+}
+
+.lyricsContent-lyrics {
+    max-width: 100%;
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+    
+}
+
+.lyricsContent .container {
+	color: #FFF;
+}
+
+.lyricsContent-detail-title {
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.lyricsContent-detail {
+	font-size: 1.3em;
+	line-height: 2;
+}
+
+.lyricsContent-button {
+	border-radius: 8px;
+	background-color: #ec6e5a;
+	display: block;
+	color: #FFF;
+	border: none;
+	height: 50px;
+	font-size: .8em;
+	outline: none;
+}
+
+
+
+
+
 @media(min-width: 769px) {
 
 	.container {

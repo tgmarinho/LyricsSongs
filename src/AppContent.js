@@ -7,8 +7,6 @@ import InputSearch from "./components/InputSearch";
 import LyricsDetail from "./components/LyricsDetail";
 import Lyrics from "./components/Lyrics";
 
-
-
 const AppContent = ({
   lyric,
   name,
@@ -21,12 +19,14 @@ const AppContent = ({
 }) => {
   return (
     <Fragment>
-
-
       <Header />
       <InputSearch />
-      <Lyrics />
-      <LyricsDetail />
+      <section className="lyricsContent">
+        <div className="container">
+          <Lyrics className="lyricsContent-items" />
+          <LyricsDetail className="lyricsContent-items" />
+        </div>
+      </section>
 
       {/* <Aside isLoading={isLoading} handleSearch={handleSearch} /> */}
 
@@ -39,10 +39,7 @@ const AppContent = ({
         urlToVagalume={urlToVagalume}
       /> */}
 
-
-
       <Footer />
-
     </Fragment>
   );
 };
