@@ -1,21 +1,13 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types';
-import { Spin } from "antd";
+import SearchInput from './searchInput/SearchInput';
 
-const InputSearch = ({ handleSearch, isLoading }) => (
-
-    <Fragment>
-       
-            <div className="group">
-                <input  onKeyUp={handleSearch} className="" type="text" name="search" required="required" />
-                <label for="search" className="">Musica</label>
-                <div className="bar"></div>
-            </div>
-
-           {/* <Spin size="large" tip="Buscando..." hidden={isLoading} /> */}
-      
-    </Fragment>
+const InputSearch = ({ handleSearch, isLoading }) =>  (
+<section className="container">
+<SearchInput />
+</section>
 )
+
 
 InputSearch.propTypes = {
     handleSearch: PropTypes.func.isRequired,
