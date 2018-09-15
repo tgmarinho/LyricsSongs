@@ -7,7 +7,7 @@ const SearchInput = (props) => {
         <Fragment>
             <div className="searchGroup">
                 <input className="searchInput" type="text" name="search" required="required" {...props} />
-                <label for="search" className="searchLabel">Musica</label>
+                <label for="search" className="searchLabel">Pesquisar</label>
                 <div className="searchBar"></div>
             </div>
 
